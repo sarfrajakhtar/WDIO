@@ -17,7 +17,7 @@ exports.config = {
     ],
     suites: {
         first: [
-            './test/specs/example.e2e.js', './test/specs/example.e2eSecond.js'
+            './test/specs/example.e2e.js'
         ],
         second: [
             './test/specs/example.e2eSecond.js',
@@ -129,7 +129,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare: function (config, capabilities) {
-        console.log("Am here.....")
+        console.log(require('fs').readFileSync('funMsg.txt','utf-8').toString());
         let reportAggregator = new ReportAggregator({
             outputDir: './Reports/html-reports/',
             filename: 'master-report.html',
