@@ -1,3 +1,4 @@
 node_modules
 Reports
 .DS_Store
+package-lock.json
